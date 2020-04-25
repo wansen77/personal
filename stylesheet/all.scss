@@ -1,0 +1,176 @@
+@import 'functions';
+@import 'variables';
+
+body{
+    font-family:Microsoft JhengHei;
+}
+
+
+.header{
+  background-color: $primary;
+  height: 250px;
+  padding: 100px;
+}
+.headerContent{
+     margin-left: 400px;
+}
+
+
+.side{
+    position: absolute;
+    left: 30px;
+    top:0;
+    width: 320px;
+    background-color: $secondary;
+}
+
+.myphoto{
+    width: 272px;
+    height: 272px;
+    border: solid 10px $primary;
+    border-radius: 50%;
+    background-image: url(/img/photo.png);
+    background-size: cover;
+    position: center center;
+}
+
+.myphototop{
+    display: none;
+    width: 272px;
+    height: 272px;
+    border: solid 10px $secondary;
+    border-radius: 50%;
+    margin: 0 auto;   
+}
+
+.about{
+    text-indent: 32px;
+    line-height: 2;
+}
+
+.character{
+    text-indent: 32px;
+    line-height: 2; 
+}
+
+.int{
+    text-indent: 32px;
+    line-height: 2; 
+}
+
+.QR{
+  display: block;
+ width: 100px;
+ margin: 0 auto;
+}
+
+.line {
+  border-bottom: 1px solid $primary !important;
+  position: relative;
+}
+
+.line:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border: 10px solid $primary;
+  border-width: 3px 100px;
+  top: -3px;
+  right:36px;
+  border-radius: 3px;
+}
+
+.line-blue {
+  border-bottom: 1px solid $secondary !important;
+  position: relative;
+}
+
+h2{
+    color: $primary;
+}
+
+.h2-blue{
+    color:$secondary;
+}
+
+.content{
+    margin-left: 400px;
+}
+
+/* timeline */
+
+.time{
+  position: relative;
+  /* 讓偽元素以 ul 作為定位點，因此 ul 需要設定為「相對位置」 */
+}
+/* 2. li margin-bottom */
+.edu{
+  margin-bottom: 32px;
+}
+/* 3. 利用偽元素做圓點*/
+.edu::before{ /*前方偽元素*/
+  content: "";
+  /*產生一個空的元素，偽元素使用不能少的步驟*/
+  position: absolute;
+  /* 偽元素需設定成「絕對位置」 */
+  width: 16px; /*圓點寬*/
+  height: 16px;/*圓點高*/
+  background-color: #96A9C4; /*圓點 color*/
+  border-radius: 50%; /*圓*/
+  left: -32px; /*圓點本來覆蓋在 li 上*/
+}
+/* 4. 利用偽元素做線*/
+.timeline::after{ /*後方偽元素*/
+  content: "";
+  /*產生一個空的元素，偽元素使用不能少的步驟*/
+  position: absolute;
+  /* 偽元素需設定成「絕對位置」 */
+  border-left: 1px solid #96A9C4;
+  /* 一定要加上 top, bottom 的值，線條才會有高度 */
+  top: 0px;
+  bottom: 0px;
+  /* 設定 top 0px, bottom 0px 就會剛好撐滿整個 ul 的高度 */	
+  left: -24px;
+  /* 為了要讓線條對準圓心，因此需往左 16px（圓圈和文字之間的距離）+ 8px（圓圈的半徑）= 24px */
+}
+
+.progress-bar{
+    color:$secondary;
+    background-color: $primary;
+}
+
+.fas,.fab{
+  color: $secondary;
+}
+
+.fa-check{
+  color:$primary ;
+}
+
+@media (max-width: 768px) { 
+    .side{
+       position: relative;
+       width: auto;
+       left: 0;
+    }
+    .header{
+     height: auto;
+     padding: 50px;
+     text-align: center;
+    }
+    .headerContent{
+     margin-left: 0;
+    } 
+    .myphoto{
+        display: none;
+    }
+    .myphototop{
+        display: block;
+    }
+    .content{
+    margin-left: 0;
+   }
+   .line:before{
+       display: none;
+   }
+ }
