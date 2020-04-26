@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>個人履歷</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="shortcut icon" href="">
@@ -15,28 +13,15 @@
 
 <body>
     <div class="wrap">
-        <header class="header text-center">
-            <div class="headerContent">
-                <img src="./img/photo.png" class="myphototop " alt="">
-                <span class="h1 font-weight-bold">林旺伸
-                    <br>Wangsen Lin
-                </span>
-                <!-- <nav class="navbar navbar-expand-lg navbar-light">
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav mx-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">首頁</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">作品集</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">連結</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav> -->
+        <header class="header">
+            <!-- <img src="./img/photo.png" class="myphototop " alt=""> -->
+            <div class="styles row justify-content-end">
+                <a href="" class="col-6 col-md-2 classic bg-cover"></a>
+                <a href="" class="col-6 col-md-2 animal bg-cover"></a>
+                <a href="" class="col-6 col-md-2 plant bg-cover"></a>
+                <a href="" class="col-6 col-md-2 mechanical  bg-cover"></a>
             </div>
+
 
         </header>
 
@@ -97,19 +82,20 @@
             </div>
             <div class="line-blue"></div>
             <div class="row my-4 mx-5">
-                <div class="col-md-6">
+                <div class="col-md-6 experience">
                     <ul class="list-unstyled time">
                         <li class="edu timeline">2020/5 -----<span class="h5">找尋下階段任務</span>
                         </li>
                         <li class="edu timeline">2020/2-2020/5 -----<span class="h5">參與自媒體行銷產訓班</span></li>
                         <li class="edu timeline">2013/7-2020/1 -----<span class="h5">三豪昌食品機械</span>
-                            <ul>
-                                <li>產線主管</li>
-                                <li>品管</li>
-                                <li>研發助理</li>
-                                <li>新進人員教育訓練</li>
-                                <li>ISO9001內稽人員</li>
-                            </ul>
+                            <ol class="list-unstyled">
+
+                                <li><i class="fas fa-check"></i>產線主管</li>
+                                <li><i class="fas fa-check"></i>品管</li>
+                                <li><i class="fas fa-check"></i>研發助理</li>
+                                <li><i class="fas fa-check"></i>新進人員教育訓練</li>
+                                <li><i class="fas fa-check"></i>ISO9001內稽人員</li>
+                            </ol>
                         </li>
 
                     </ul>
@@ -117,17 +103,17 @@
                 <div class="col-md-6">
                     <ul class="list-unstyled time">
                         <li class="edu timeline">2009 -----<span class="h5">國立宜蘭大學-動物科技學系</span>
-                            <ul>
-                                <li>印象最深的一句話--任何生命給予的價值並不是由他人決定的</li>
-                                <li>在校成績第五名畢業</li>
-                                <li>完成單車環島</li>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check"></i>印象最深的一句話--任何生命給予的價值並不是由他人決定的</li>
+                                <li><i class="fas fa-check"></i>在校成績第五名畢業</li>
+                                <li><i class="fas fa-check"></i>完成單車環島</li>
                             </ul>
                         </li>
                         <li class="edu timeline">2005 -----<span class="h5">國立台中高農-園藝科</span>
-                            <ul>
-                                <li>印象最深的一句話--永遠不要忘記手拿鋤頭，腳踩泥土的踏實</li>
-                                <li>在校成績第一名畢業</li>
-                                <li>園藝丙級/造園施工丙級證照</li>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check"></i>印象最深的一句話--永遠不要忘記手拿鋤頭，腳踩泥土的踏實</li>
+                                <li><i class="fas fa-check"></i>在校成績第一名畢業</li>
+                                <li><i class="fas fa-check"></i>園藝丙級/造園施工丙級證照</li>
                             </ul>
                         </li>
                     </ul>
@@ -222,28 +208,45 @@
                             <div class="progress-bar" role="progressbar" style="width: 60%;">60%</div>
                         </div>
                     </div>
-
-
                 </div>
                 <div class="row justify-content-between">
                     <div class="col-6">
-                        <h2 class="h2-blue">職能性格分析</h2>
+                        <h2 class="h2-blue font-weight-bold mt-4">職能性格分析</h2>
                     </div>
-                    <div class="col-6 text-right pt-2 pr-5">
+                    <div class="col-6 text-right pt-2 pr-5 mt-4">
                         <i class="fas fa-file-signature fa-lg"></i>
                     </div>
                 </div>
                 <div class="line-blue"></div>
+                <ul class="character my-4">
+                    <li><em
+                            class="font-weight-bold text-primary">條理分明，重紀律</em>---在PDP性格測試系統裡的五種特質其實都很相近，其中老虎和貓頭鷹同是25分，但個人覺得更接近貓頭鷹，而分數最低的是孔雀22分。在過去的工作中或許有時讓人覺得死板，但在經驗裡，遵守遊戲規則不但保護團隊同時也是保護自己。
+                    </li>
+                    <li><em
+                            class="font-weight-bold text-primary">喜歡安靜，細心觀察</em>---在MBTI的測試結果為ISFJ，話少大概指的是正式場合或在不認識的人面前吧，相反的心裡面會常常去思考一句話背後代表的意義，容易交互主觀並給予尊重。
+                    </li>
+                    <li><em
+                            class="font-weight-bold text-primary">表達情感，獨立自主</em>---在九大職能星的測試和半年前的結果是差不多的，情感方面對催淚劇情的防禦力很低，容易紅眼眶；而自主性，在有一定的把握下喜歡先自己嘗試，喜歡理解錯誤後的成就。
+                    </li>
+                    <li><em
+                            class="font-weight-bold text-primary">星座/血型</em>---牡羊座/AB型，直白、熱血，對自己有興趣的事情會廢寢忘食，行動力強，但遇到重要的事情A和B必須在心中先開個會。
+                    </li>
+                </ul>
                 <div class="row justify-content-between">
                     <div class="col-6">
-                        <h2 class="h2-blue">自傳</h2>
+                        <h2 class="h2-blue font-weight-bold mt-4">自傳</h2>
                     </div>
-                    <div class="col-6 text-right pt-2 pr-5">
+                    <div class="col-6 text-right pt-2 pr-5 mt-4">
                         <i class="fas fa-file-signature fa-lg"></i>
                     </div>
                 </div>
                 <div class="line-blue"></div>
-
+                <p class="introduction my-4"> 你好，我的名字是 “林旺伸”
+                    ，想應徵的工作為<span class="text-danger h5 font-weight-bold">前端工程師</span>或<span
+                        class="text-danger h5 font-weight-bold">網站管理人員</span>。<br>
+                    我在台中土生土長，國中畢業時厭倦被逼著讀書的生活於是選擇去高農過著當時嚮往的田園生活，高中生活可說是到目前為止最懷念的時光；而在步入下個階段時改換跑道想接觸動物也想離開家到外面去生活，於是到了宜蘭就讀動物科技系，但幾年下來快畢業要開始考慮找工作時才意識到雖然自己喜歡這些動植物，但卻怎樣也無法想像牠們是我未來的工作，於是退伍後便回到了之前去打工的公司去做正職，但這一做就是7年過了，先不管是經濟因素還是一些人情壓力，我知道自己的思考模式正慢慢地被定義、被侷限，所以在公司已經穩定的當下，我知道是我該步入下個階段的時候了。<br>
+                    決定學習程式語言也是當時做了一些性向測試的結果，本來是抱著被騙的心裡去買了一些線上課程利用下班時間學習，但後來發現這個深不見底的領域深深吸引了我，就這樣學習了一年，而在年初看到有自媒體行銷的課程，尤其圖片的處理，平台的經營和SEO等對我都是有幫助的，於是經過考慮後下定決心辭職也不想錯失機會，雖然短短三個月的時間但學到的東西很多，同時也利用閒暇時間慢慢補了一些後端語言，讓自己對前後都有一些概念。未來，若還有其他進修時間，我會先把後端掌握到更好，並先往開發手機APP為主要方向。
+                </p>
             </div>
         </div>
 
@@ -266,6 +269,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
+    <script src="./all.js"></script>
 </body>
 
 </html>
