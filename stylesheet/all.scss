@@ -40,29 +40,90 @@ body{
     font-family:Microsoft JhengHei;
 }
 
-.wrap{
-  max-width: 1920px;
-}
-
 .bg-cover{
   background-size: cover;
   position: center center;
 }
+.styles{
+  position: relative;
+ 
+}
+
+.normal{
+  background-image:url(/img/ani1.jpg) ;
+  height: 250px;
+  position: absolute;
+  right: 320px;
+  z-index: 400;
+  border-radius: 10px;
+}
+.normal:hover{
+ box-shadow: 0 0 20px grey;
+//圖片放大
+ overflow:hidden;
+ transform: scale(1.1);
+ transition:all 0.05s ease 0s
+}
+
+.animal{
+  background-image: url(/img/ani2.jpg);
+  height: 250px;
+  position: absolute;
+  right: 220px;
+  z-index: 300;
+  border-radius: 10px;
+}
+.animal:hover{
+  z-index: 500;
+  box-shadow: 0 0 20px red;
+  overflow:hidden;
+  transform: scale(1.1);
+  transition:all 0.05s ease 0s
+}
+
+.plant{
+  background-image: url(/img/pla1.jpg);
+  height: 250px;
+  position: absolute;
+  right: 120px;
+  z-index: 200;
+  border-radius: 10px;
+}
+.plant:hover{
+  z-index: 500;
+  box-shadow: 0 0 20px yellow;
+  overflow:hidden;
+ transform: scale(1.1);
+ transition:all 0.05s ease 0s
+}
+
+.special{
+  background-image: url(/img/mac1.jpg);
+  height: 250px;
+  position: absolute;
+  right: 20px;
+  z-index: 100;
+  border-radius: 10px;
+}
+.special:hover{
+ z-index: 500;
+ box-shadow: 0 0 20px orchid;
+ overflow:hidden;
+ transform: scale(1.1);
+ transition:all 0.05s ease 0s
+}
+
+// ------------------------------------------
 
 
-
-
+.wrap-nor{
+  max-width: 1920px;
+}
 
 .header{
   background-color: $primary;
   height: 250px;
-  // padding: 100px;
 }
-// .headerContent{
-//      margin-left: 400px;
-// }
-
-
 .side{
     position: absolute;
     left: 30px;
@@ -83,11 +144,6 @@ body{
 
 .myphototop{
     display: none;
-    width: 272px;
-    height: 272px;
-    border: solid 10px $secondary;
-    border-radius: 50%;
-    margin: 0 auto;   
 }
 
 .about{
@@ -116,7 +172,7 @@ body{
   position: relative;
 }
 
-.line:before {
+.line::before {
   content: "";
   position: absolute;
   display: inline-block;
@@ -202,65 +258,182 @@ h2{
   text-indent: 32px;
   line-height: 2;
 }
-// @media (max-width: 768px) { 
-//     .side{
-//        position: relative;
-//        width: auto;
-//        left: 0;
-//     }
-//     .header{
-//      height: auto;
-    
-//      text-align: center;
-//     }
-//     .headerContent{
-//      margin-left: 0;
-//     } 
-//     .myphoto{
-//         display: none;
-//     }
-//     .myphototop{
-//         display: block;
-//     }
-//     .content{
-//     margin-left: 0;
-//    }
-//    .line:before{
-//        display: none;
-//    }
-//  }
+@media (max-width: 768px) { 
+    .side{
+       position: relative;
+       width: auto;
+       left: 0;
+    }
+    .header{
+     text-align: center;
+    }
+    .headerContent{
+     margin-left: 0;
+    } 
+    .myphoto{
+        display: none;
+    }
+    .myphototop{
+    display: block;
+    width: 272px;
+    height: 272px;
+    border: solid 10px $primary;
+    border-radius: 50%;
+    margin: 40px auto;   
+}
+    .content{
+    margin-left: 0;
+   }
+   .line:before{
+       display: none;
+   }
+ }
 
 
 
+// animal---------------------------------------------------------
 
+.wrap-ani{
+  background-image: url(../img/dog.gif);
+  max-width: 1920px;
 
-
-//  -----------------------styles-------------------------
-.classic{
-  background-image:url(/img/ani1.jpg) ;
+.header{
+  background-image: url(../img/dog1-01.jpg);
   height: 250px;
+  position: right bottom;
 }
 
-.animal{
-  background-image: url(/img/ani2.jpg);
-  height: 250px;
- 
+
+.data{
+    background-color: $coffee;
+}
+.data-1{
+  border-radius: 50px 0 0 50px;
+}
+.data-4{
+  border-radius: 0 50px 50px 0;
 }
 
-.plant{
-  background-image: url(/img/pla1.jpg);
-  height: 250px;
+
+.img-border{
+  border-radius:50px;
 }
 
-.mechanical{
-  background-image: url(/img/mac1.jpg);
-  height: 250px;
+.myphoto-ani{
+    width: 180px;
+    height: 180px;
+    border: solid 10px $yellow;
+    border-radius: 50%;
+    background-image: url(/img/photo.png);
+}
+.about{
+    text-indent: 32px;
+    line-height: 2;
 }
 
-// .Education{
-//    color:$danger;
-// }
-
-.experience.ani-experience li{
-  color:$danger;
+.character{
+    text-indent: 32px;
+    line-height: 2; 
 }
+
+.int{
+    text-indent: 32px;
+    line-height: 2; 
+}
+
+.QR{
+ display: block;
+ width: 100px;
+ margin: 0 auto;
+}
+
+.line {
+  border-bottom: 1px solid $yellow !important;
+}
+
+.line-blue {
+  border-bottom: 1px solid $secondary !important;
+
+}
+.card{
+  background-color: $coffee;
+}
+
+h2{
+    color: $yellow;
+}
+
+.h2-blue{
+    color:$secondary;
+}
+
+.line::before {
+  content: "";
+  display: none;
+}
+
+/* timeline */
+
+.time{
+  position: relative;
+}
+.edu{
+  margin-bottom: 32px;
+}
+.edu::before{ 
+  content: "";
+  position: absolute;
+  width: 16px; 
+  height: 16px;
+  background-color: #96A9C4; 
+  border-radius: 50%; 
+  top: -32px;
+}
+
+.timeline::after{ 
+  content: "";
+  position: absolute;
+  border-top: 1px solid #96A9C4;
+  left: 15px;
+  right: 0px;
+  top: -24px;
+}
+
+
+.progress-bar{
+    color:$secondary;
+    background-color: $yellow;
+}
+
+.fas,.fab{
+  color: $secondary;
+}
+
+.fa-check{
+  color:$yellow ;
+}
+
+.character{
+   line-height: 2;
+}
+
+.introduction{
+  text-indent: 32px;
+  line-height: 2;
+}
+@media (max-width: 768px) { 
+  .myphoto-ani{
+  width: 272px;
+  height: 272px;
+    }
+   .data-1{
+  border-radius: 0;
+    }
+   .data-4{
+  border-radius: 0;
+    }
+ }
+
+
+}
+

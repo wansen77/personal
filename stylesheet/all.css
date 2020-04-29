@@ -9922,13 +9922,96 @@ body {
   font-family: Microsoft JhengHei;
 }
 
-.wrap {
-  max-width: 1920px;
-}
-
 .bg-cover {
   background-size: cover;
   position: center center;
+}
+
+.styles {
+  position: relative;
+}
+
+.normal {
+  background-image: url(/img/ani1.jpg);
+  height: 250px;
+  position: absolute;
+  right: 320px;
+  z-index: 400;
+  border-radius: 10px;
+}
+
+.normal:hover {
+  -webkit-box-shadow: 0 0 20px grey;
+          box-shadow: 0 0 20px grey;
+  overflow: hidden;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.05s ease 0s;
+  transition: all 0.05s ease 0s;
+}
+
+.animal {
+  background-image: url(/img/ani2.jpg);
+  height: 250px;
+  position: absolute;
+  right: 220px;
+  z-index: 300;
+  border-radius: 10px;
+}
+
+.animal:hover {
+  z-index: 500;
+  -webkit-box-shadow: 0 0 20px red;
+          box-shadow: 0 0 20px red;
+  overflow: hidden;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.05s ease 0s;
+  transition: all 0.05s ease 0s;
+}
+
+.plant {
+  background-image: url(/img/pla1.jpg);
+  height: 250px;
+  position: absolute;
+  right: 120px;
+  z-index: 200;
+  border-radius: 10px;
+}
+
+.plant:hover {
+  z-index: 500;
+  -webkit-box-shadow: 0 0 20px yellow;
+          box-shadow: 0 0 20px yellow;
+  overflow: hidden;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.05s ease 0s;
+  transition: all 0.05s ease 0s;
+}
+
+.special {
+  background-image: url(/img/mac1.jpg);
+  height: 250px;
+  position: absolute;
+  right: 20px;
+  z-index: 100;
+  border-radius: 10px;
+}
+
+.special:hover {
+  z-index: 500;
+  -webkit-box-shadow: 0 0 20px orchid;
+          box-shadow: 0 0 20px orchid;
+  overflow: hidden;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.05s ease 0s;
+  transition: all 0.05s ease 0s;
+}
+
+.wrap-nor {
+  max-width: 1920px;
 }
 
 .header {
@@ -9956,11 +10039,6 @@ body {
 
 .myphototop {
   display: none;
-  width: 272px;
-  height: 272px;
-  border: solid 10px #33506c;
-  border-radius: 50%;
-  margin: 0 auto;
 }
 
 .about {
@@ -9989,7 +10067,7 @@ body {
   position: relative;
 }
 
-.line:before {
+.line::before {
   content: "";
   position: absolute;
   display: inline-block;
@@ -10085,27 +10163,178 @@ h2 {
   line-height: 2;
 }
 
-.classic {
-  background-image: url(/img/ani1.jpg);
-  height: 250px;
+@media (max-width: 768px) {
+  .side {
+    position: relative;
+    width: auto;
+    left: 0;
+  }
+  .header {
+    text-align: center;
+  }
+  .headerContent {
+    margin-left: 0;
+  }
+  .myphoto {
+    display: none;
+  }
+  .myphototop {
+    display: block;
+    width: 272px;
+    height: 272px;
+    border: solid 10px #f2d13f;
+    border-radius: 50%;
+    margin: 40px auto;
+  }
+  .content {
+    margin-left: 0;
+  }
+  .line:before {
+    display: none;
+  }
 }
 
-.animal {
-  background-image: url(/img/ani2.jpg);
-  height: 250px;
+.wrap-ani {
+  background-image: url(../img/dog.gif);
+  max-width: 1920px;
+  /* timeline */
 }
 
-.plant {
-  background-image: url(/img/pla1.jpg);
+.wrap-ani .header {
+  background-image: url(../img/dog1-01.jpg);
   height: 250px;
+  position: right bottom;
 }
 
-.mechanical {
-  background-image: url(/img/mac1.jpg);
-  height: 250px;
+.wrap-ani .data {
+  background-color: #3D252A;
 }
 
-.experience.ani-experience li {
-  color: #dc3545;
+.wrap-ani .data-1 {
+  border-radius: 50px 0 0 50px;
+}
+
+.wrap-ani .data-4 {
+  border-radius: 0 50px 50px 0;
+}
+
+.wrap-ani .img-border {
+  border-radius: 50px;
+}
+
+.wrap-ani .myphoto-ani {
+  width: 180px;
+  height: 180px;
+  border: solid 10px #ffc107;
+  border-radius: 50%;
+  background-image: url(/img/photo.png);
+}
+
+.wrap-ani .about {
+  text-indent: 32px;
+  line-height: 2;
+}
+
+.wrap-ani .character {
+  text-indent: 32px;
+  line-height: 2;
+}
+
+.wrap-ani .int {
+  text-indent: 32px;
+  line-height: 2;
+}
+
+.wrap-ani .QR {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.wrap-ani .line {
+  border-bottom: 1px solid #ffc107 !important;
+}
+
+.wrap-ani .line-blue {
+  border-bottom: 1px solid #33506c !important;
+}
+
+.wrap-ani .card {
+  background-color: #3D252A;
+}
+
+.wrap-ani h2 {
+  color: #ffc107;
+}
+
+.wrap-ani .h2-blue {
+  color: #33506c;
+}
+
+.wrap-ani .line::before {
+  content: "";
+  display: none;
+}
+
+.wrap-ani .time {
+  position: relative;
+}
+
+.wrap-ani .edu {
+  margin-bottom: 32px;
+}
+
+.wrap-ani .edu::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #96A9C4;
+  border-radius: 50%;
+  top: -32px;
+}
+
+.wrap-ani .timeline::after {
+  content: "";
+  position: absolute;
+  border-top: 1px solid #96A9C4;
+  left: 15px;
+  right: 0px;
+  top: -24px;
+}
+
+.wrap-ani .progress-bar {
+  color: #33506c;
+  background-color: #ffc107;
+}
+
+.wrap-ani .fas, .wrap-ani .fab {
+  color: #33506c;
+}
+
+.wrap-ani .fa-check {
+  color: #ffc107;
+}
+
+.wrap-ani .character {
+  line-height: 2;
+}
+
+.wrap-ani .introduction {
+  text-indent: 32px;
+  line-height: 2;
+}
+
+@media (max-width: 768px) {
+  .wrap-ani .myphoto-ani {
+    width: 272px;
+    height: 272px;
+  }
+  .wrap-ani .data-1 {
+    border-radius: 0;
+  }
+  .wrap-ani .data-4 {
+    border-radius: 0;
+  }
 }
 /*# sourceMappingURL=all.css.map */
