@@ -3,6 +3,20 @@ $(document).ready(function () {
         event.preventDefault();
         $('.wrap-nor').addClass('d-none')
         $('.wrap-ani').removeClass('d-none')
+        $('.wrap-pla').addClass('d-none')
+    });
+    $('.normal').click(function (event) {
+        event.preventDefault();
+        $('.wrap-nor').removeClass('d-none')
+        $('.wrap-ani').addClass('d-none')
+        $('.wrap-pla').addClass('d-none')
+    });
+    $('.plant').click(function (event) {
+        event.preventDefault();
+
+        $('.wrap-nor').addClass('d-none')
+        $('.wrap-ani').addClass('d-none')
+        $('.wrap-pla').removeClass('d-none')
     });
 
 });
@@ -88,3 +102,7 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+
+
+
+

@@ -39,7 +39,6 @@
 body{
     font-family:Microsoft JhengHei;
 }
-
 .bg-cover{
   background-size: cover;
   position: center center;
@@ -118,6 +117,7 @@ body{
 
 .wrap-nor{
   max-width: 1920px;
+
 }
 
 .header{
@@ -434,6 +434,151 @@ h2{
     }
  }
 
+
+}
+
+// plant-------------------------------------------------
+.wrap-pla{
+  background-image: url(../img/sakura.png);
+  max-width: 1920px;
+  .header{
+  background-image: url(../img/sakura2.jpg);
+  height: 250px;
+}
+
+.photo{
+  background-color: $info;
+}
+
+.myphoto-pla{
+    width: 272px;
+    height: 272px;
+    border: solid 10px $info;
+    border-radius: 50%;
+    background-image: url(/img/photo.png);
+    background-size: cover;
+    position: center center;
+ 
+}
+
+.about{
+    text-indent: 32px;
+    line-height: 2;
+}
+
+.character{
+    text-indent: 32px;
+    line-height: 2; 
+}
+
+.int{
+    text-indent: 32px;
+    line-height: 2; 
+}
+
+.QR{
+display: block;
+ width: 100px;
+ margin: 0 auto;
+}
+
+.line {
+  border-bottom: 1px solid $info !important;
+  position: relative;
+  text-align: right;
+}
+
+.line::before {
+  content: "";
+  display: none;
+}
+
+.line-blue {
+  border-bottom: 1px solid $secondary !important;
+}
+
+h2{
+    color: $info;
+}
+
+.h2-blue{
+    color:$secondary;
+}
+
+
+/* timeline */
+
+.time{
+  position: relative;
+}
+.edu{
+  margin-bottom: 32px;
+}
+.edu::before{ 
+  content: "";
+  position: absolute;
+  
+  width: 8px; 
+  height: 8px;
+  background-color: #96A9C4; 
+  border-radius: 50%; 
+  left: -18px; 
+}
+.timeline::after{ 
+  content: "";
+  position: absolute;
+  border-left: 1px solid #96A9C4;
+  top: 0px;
+  bottom: 0px;
+  left: -14px;
+}
+
+.progress-bar{
+    color:$secondary;
+    background-color: $info;
+}
+
+.fas,.fab{
+  color: $secondary;
+}
+
+.fa-check{
+  color:$info ;
+}
+
+.character{
+   line-height: 2;
+}
+
+.introduction{
+  text-indent: 32px;
+  line-height: 2;
+}
+.photo-10{
+  background-image: url(../img/photo10.jpg);
+}
+.photo-20{
+  background-image: url(../img/photo20.jpg);
+}
+
+
+
+@media (max-width: 768px) { 
+   .photo-30{
+     background-image: url(../img/photo10.jpg);
+     color:white;
+     .h2-blue{
+       color: white;
+     }
+   }
+   .photo-40{
+     background-image: url(../img/photo20.jpg);
+      color:white;
+     .h2-blue{
+       color: white;
+     }
+   }
+ }
 
 }
 
