@@ -3605,6 +3605,283 @@ a.text-dark:hover, a.text-dark:focus {
   visibility: hidden !important;
 }
 
+.wrapRace {
+  max-width: 1980px;
+  height: 570px;
+  position: relative;
+  background-image: url(../img/way.png);
+}
+
+.race {
+  max-width: 200px;
+  position: absolute;
+  -webkit-animation-name: race;
+          animation-name: race;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.race.active {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+.chachan {
+  top: 0;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+.fadog {
+  top: 120px;
+  -webkit-animation-duration: 25s;
+          animation-duration: 25s;
+}
+
+.shanhu {
+  top: 340px;
+  -webkit-animation-duration: 18s;
+          animation-duration: 18s;
+}
+
+@-webkit-keyframes race {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes race {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.works-head {
+  background-image: url(../img/0429.jpg);
+  background-size: 100%;
+  position: center center;
+  width: 100%;
+  height: 400px;
+}
+
+.work-sele {
+  padding-top: 320px;
+}
+
+@media (max-width: 768px) {
+  .works-head {
+    height: auto;
+  }
+  .work-sele {
+    padding-top: 20px;
+  }
+}
+
+body.lb-disable-scrolling {
+  overflow: hidden;
+}
+
+.lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  display: none;
+}
+
+.lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-weight: normal;
+  outline: none;
+}
+
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  max-width: inherit;
+  max-height: none;
+  border-radius: 3px;
+  /* Image border */
+  border: 4px solid white;
+}
+
+.lightbox a img {
+  border: none;
+}
+
+.lb-outerContainer {
+  position: relative;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 4px;
+  /* Background color behind image.
+     This is visible during transitions. */
+  background-color: white;
+}
+
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lb-loader {
+  position: absolute;
+  top: 43%;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+
+.lb-cancel {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  background: url(../img/loading.gif) no-repeat;
+}
+
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+.lb-container > .nav {
+  left: 0;
+}
+
+.lb-nav a {
+  outline: none;
+  background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
+}
+
+.lb-prev, .lb-next {
+  height: 100%;
+  cursor: pointer;
+  display: block;
+}
+
+.lb-nav a.lb-prev {
+  width: 34%;
+  left: 0;
+  float: left;
+  background: url(../img/prev.png) left 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-prev:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.lb-nav a.lb-next {
+  width: 64%;
+  right: 0;
+  float: right;
+  background: url(../img/next.png) right 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-next:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 5px;
+  *zoom: 1;
+  width: 100%;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lb-data {
+  padding: 0 4px;
+  color: #ccc;
+}
+
+.lb-data .lb-details {
+  width: 85%;
+  float: left;
+  text-align: left;
+  line-height: 1.1em;
+}
+
+.lb-data .lb-caption {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.lb-data .lb-caption a {
+  color: #4ae;
+}
+
+.lb-data .lb-number {
+  display: block;
+  clear: left;
+  padding-bottom: 1em;
+  font-size: 12px;
+  color: #999999;
+}
+
+.lb-data .lb-close {
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url(../img/close.png) top right no-repeat;
+  text-align: right;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.lb-data .lb-close:hover {
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -9932,82 +10209,30 @@ body {
 }
 
 .normal {
-  background-image: url(/img/ani1.jpg);
-  height: 250px;
-  position: absolute;
-  right: 320px;
-  z-index: 400;
   border-radius: 10px;
 }
 
 .normal:hover {
-  -webkit-box-shadow: 0 0 20px grey;
-          box-shadow: 0 0 20px grey;
-  overflow: hidden;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: all 0.05s ease 0s;
-  transition: all 0.05s ease 0s;
+  -webkit-box-shadow: 0 0 20px #33506c;
+          box-shadow: 0 0 20px #33506c;
 }
 
 .animal {
-  background-image: url(/img/ani2.jpg);
-  height: 250px;
-  position: absolute;
-  right: 220px;
-  z-index: 300;
   border-radius: 10px;
 }
 
 .animal:hover {
-  z-index: 500;
-  -webkit-box-shadow: 0 0 20px red;
-          box-shadow: 0 0 20px red;
-  overflow: hidden;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: all 0.05s ease 0s;
-  transition: all 0.05s ease 0s;
+  -webkit-box-shadow: 0 0 20px #f2d13f;
+          box-shadow: 0 0 20px #f2d13f;
 }
 
 .plant {
-  background-image: url(/img/pla1.jpg);
-  height: 250px;
-  position: absolute;
-  right: 120px;
-  z-index: 200;
   border-radius: 10px;
 }
 
 .plant:hover {
-  z-index: 500;
-  -webkit-box-shadow: 0 0 20px yellow;
-          box-shadow: 0 0 20px yellow;
-  overflow: hidden;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: all 0.05s ease 0s;
-  transition: all 0.05s ease 0s;
-}
-
-.special {
-  background-image: url(/img/mac1.jpg);
-  height: 250px;
-  position: absolute;
-  right: 20px;
-  z-index: 100;
-  border-radius: 10px;
-}
-
-.special:hover {
-  z-index: 500;
-  -webkit-box-shadow: 0 0 20px orchid;
-          box-shadow: 0 0 20px orchid;
-  overflow: hidden;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: all 0.05s ease 0s;
-  transition: all 0.05s ease 0s;
+  -webkit-box-shadow: 0 0 20px #678a74;
+          box-shadow: 0 0 20px #678a74;
 }
 
 .wrap-nor {
@@ -10015,8 +10240,29 @@ body {
 }
 
 .header {
-  background-color: #f2d13f;
-  height: 250px;
+  background: transparent;
+}
+
+#full-video {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  opacity: .5;
+}
+
+.sele {
+  font-size: 20px;
+}
+
+.sele li:hover {
+  color: black;
+  -webkit-box-shadow: 0px 0px 10px gray;
+          box-shadow: 0px 0px 10px gray;
+  border: solid 1px gray;
+  border-radius: 10px;
 }
 
 .side {
@@ -10032,7 +10278,7 @@ body {
   height: 272px;
   border: solid 10px #f2d13f;
   border-radius: 50%;
-  background-image: url(/img/photo.png);
+  background-image: url(../img/photo.png);
   background-size: cover;
   position: center center;
 }
@@ -10201,7 +10447,7 @@ h2 {
 }
 
 .wrap-ani .header {
-  background-image: url(../img/dog1-01.jpg);
+  background-image: url(../img/dog1-01.png);
   height: 250px;
   position: right bottom;
 }
@@ -10227,7 +10473,7 @@ h2 {
   height: 180px;
   border: solid 10px #ffc107;
   border-radius: 50%;
-  background-image: url(/img/photo.png);
+  background-image: url(../img/photo.png);
 }
 
 .wrap-ani .about {
@@ -10358,7 +10604,7 @@ h2 {
   height: 272px;
   border: solid 10px #678a74;
   border-radius: 50%;
-  background-image: url(/img/photo.png);
+  background-image: url(../img/photo.png);
   background-size: cover;
   position: center center;
 }

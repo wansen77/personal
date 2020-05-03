@@ -1,0 +1,43 @@
+
+.wrapRace{
+    max-width: 1980px;
+    height:570px;
+    position: relative;
+    background-image: url(../img/way.png);
+}
+
+
+.race{
+    max-width: 200px;
+    position: absolute;
+    animation-name:race;
+    animation-play-state:paused;
+}
+.race.active{
+    animation-play-state:running;
+}
+
+.chachan{
+    top:0;
+    animation-duration:20s;
+    animation-timing-function:ease-out;  
+}
+.fadog{
+    top:120px;
+    animation-duration:25s;
+}
+.shanhu{
+    top:340px;
+    animation-duration:18s;
+}
+
+
+@keyframes race{
+    from{
+        left:0;
+    }
+    to{
+        left:100%;
+    }
+}
+

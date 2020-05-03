@@ -1,0 +1,20 @@
+.works-head{
+    background-image: url(../img/0429.jpg);
+    background-size: 100%;
+    position:center center;
+    width: 100%;
+    height: 400px;
+   
+}
+.work-sele{
+    padding-top:320px ;
+}
+
+@media (max-width: 768px){
+    .works-head{
+        height: auto;
+    }
+    .work-sele{
+    padding-top:20px ;
+}
+}

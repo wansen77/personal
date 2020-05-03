@@ -3,6 +3,11 @@
 @import './helper/variables';
 @import './bootstrap/scss/mixins';
 @import "./bootstrap/scss/utilities";
+@import "./helper/game";
+@import "./helper/works";
+@import "./helper/lightbox";
+
+
 
 // Layout & components
 @import "./bootstrap/scss/root";
@@ -39,6 +44,7 @@
 body{
     font-family:Microsoft JhengHei;
 }
+
 .bg-cover{
   background-size: cover;
   position: center center;
@@ -49,68 +55,28 @@ body{
 }
 
 .normal{
-  background-image:url(/img/ani1.jpg) ;
-  height: 250px;
-  position: absolute;
-  right: 320px;
-  z-index: 400;
   border-radius: 10px;
 }
 .normal:hover{
- box-shadow: 0 0 20px grey;
+ box-shadow: 0 0 20px $secondary;
 //圖片放大
- overflow:hidden;
- transform: scale(1.1);
- transition:all 0.05s ease 0s
-}
 
+}
 .animal{
-  background-image: url(/img/ani2.jpg);
-  height: 250px;
-  position: absolute;
-  right: 220px;
-  z-index: 300;
   border-radius: 10px;
 }
 .animal:hover{
-  z-index: 500;
-  box-shadow: 0 0 20px red;
-  overflow:hidden;
-  transform: scale(1.1);
-  transition:all 0.05s ease 0s
+  box-shadow: 0 0 20px $primary;
+ 
 }
-
 .plant{
-  background-image: url(/img/pla1.jpg);
-  height: 250px;
-  position: absolute;
-  right: 120px;
-  z-index: 200;
   border-radius: 10px;
 }
 .plant:hover{
-  z-index: 500;
-  box-shadow: 0 0 20px yellow;
-  overflow:hidden;
- transform: scale(1.1);
- transition:all 0.05s ease 0s
+  box-shadow: 0 0 20px $info;
+ 
 }
 
-.special{
-  background-image: url(/img/mac1.jpg);
-  height: 250px;
-  position: absolute;
-  right: 20px;
-  z-index: 100;
-  border-radius: 10px;
-}
-.special:hover{
- z-index: 500;
- box-shadow: 0 0 20px orchid;
- overflow:hidden;
- transform: scale(1.1);
- transition:all 0.05s ease 0s
-}
 
 // ------------------------------------------
 
@@ -121,8 +87,27 @@ body{
 }
 
 .header{
-  background-color: $primary;
-  height: 250px;
+  background:transparent;
+  
+}
+#full-video{
+ position: fixed;
+  min-width:100%;
+  min-height: 100%;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  opacity: .5;
+}
+.sele{
+font-size: 20px;
+}
+.sele li:hover{
+  color: black;
+  box-shadow: 0px 0px 10px gray;
+  border: solid 1px gray;
+  border-radius: 10px;
+ 
 }
 .side{
     position: absolute;
@@ -137,7 +122,7 @@ body{
     height: 272px;
     border: solid 10px $primary;
     border-radius: 50%;
-    background-image: url(/img/photo.png);
+    background-image: url(../img/photo.png);
     background-size: cover;
     position: center center;
 }
@@ -298,7 +283,7 @@ h2{
   max-width: 1920px;
 
 .header{
-  background-image: url(../img/dog1-01.jpg);
+  background-image: url(../img/dog1-01.png);
   height: 250px;
   position: right bottom;
 }
@@ -324,7 +309,7 @@ h2{
     height: 180px;
     border: solid 10px $yellow;
     border-radius: 50%;
-    background-image: url(/img/photo.png);
+    background-image: url(../img/photo.png);
 }
 .about{
     text-indent: 32px;
@@ -455,7 +440,7 @@ h2{
     height: 272px;
     border: solid 10px $info;
     border-radius: 50%;
-    background-image: url(/img/photo.png);
+    background-image: url(../img/photo.png);
     background-size: cover;
     position: center center;
  
@@ -581,4 +566,8 @@ h2{
  }
 
 }
+
+
+
+
 
