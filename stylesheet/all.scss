@@ -82,14 +82,16 @@ body{
 
 
 .wrap-nor{
-  max-width: 1920px;
+  max-width: 1600px;
+  margin: 0 auto;
 
 }
 
 .header{
   background:transparent;
-  
+  position: relative;
 }
+// 背景影片
 #full-video{
  position: fixed;
   min-width:100%;
@@ -244,6 +246,11 @@ h2{
   line-height: 2;
 }
 @media (max-width: 768px) { 
+//      .wrap-nor{
+//        max-width:600px;
+//        margin: 0 auto;
+
+// }
     .side{
        position: relative;
        width: auto;
@@ -280,23 +287,60 @@ h2{
 
 .wrap-ani{
   background-image: url(../img/dog.gif);
-  max-width: 1920px;
+  max-width: 1600px;
+  margin: 0 auto;
 
 .header{
+  position: relative;
   background-image: url(../img/dog1-01.png);
   height: 250px;
   position: right bottom;
 }
+.tran{
+  height: 497px;
+  perspective: 500px;
+}
+.tran-1{
+  background-color: black;
+  transition: transform .3s;
+  transform-style: preserve-3d;
+  box-shadow:0 0 30px $coffee;
+}
+
+.tran-2{
+  background-color: black;
+  transition: transform .3s;
+  transform-style: preserve-3d;
+  border-left: solid 1px white;
+  box-shadow:0 0 30px $coffee;
+}
+
+.tran-3{
+  background-color: black;
+  transition: transform .3s;
+  transform-style: preserve-3d;
+  border-left: solid 1px white;
+  box-shadow:0 0 30px $coffee;
+}
+
+.tran-4{
+  background-color: black;
+  transition: transform .3s;
+  transform-style: preserve-3d;
+  border-left: solid 1px white;
+  box-shadow:0 0 30px $coffee;
+}
+
 
 
 .data{
     background-color: $coffee;
 }
 .data-1{
-  border-radius: 50px 0 0 50px;
+  border-radius: 100px 0 0 100px;
 }
 .data-4{
-  border-radius: 0 50px 50px 0;
+  border-radius: 0 100px 100px 0;
 }
 
 
@@ -417,18 +461,64 @@ h2{
    .data-4{
   border-radius: 0;
     }
+    .tran{
+      height: auto;
+    }
+    
  }
 
 
+
+}
+@media(min-width:767px){
+  .tran-1.active{
+   transform: rotateX(180deg);
+   background-image: url(../img/NS_01.png);
+  background-size: cover;
+  position: center top;
+  .tran-data{
+    display: none;
+  }
+}
+.tran-2.active{
+   transform: rotateX(180deg);
+   background-image: url(../img/NS_02.png);
+   background-size: cover;
+   position: center center;
+  .tran-data{
+    display: none;
+  }
+}
+.tran-3.active{
+   transform: rotateX(180deg);
+   background-image: url(../img/NS_03.png);
+   background-size: cover;
+   position: center center;
+  .tran-data{
+    display: none;
+  }
+}
+.tran-4.active{
+   transform: rotateX(180deg);
+   background-image: url(../img/NS_04.png);
+   background-size: cover;
+   position: center top;
+  .tran-data{
+    display: none;
+  }
+}
 }
 
 // plant-------------------------------------------------
 .wrap-pla{
   background-image: url(../img/sakura.png);
-  max-width: 1920px;
-  .header{
+  max-width: 1600px;
+  margin: 0 auto;
+
+.header{
   background-image: url(../img/sakura2.jpg);
   height: 250px;
+  position: relative;
 }
 
 .photo{
@@ -447,6 +537,7 @@ h2{
 }
 
 .about{
+ 
     text-indent: 32px;
     line-height: 2;
 }
@@ -569,5 +660,11 @@ h2{
 
 
 
+// svg
 
+#me_1{
+  position: absolute;
+  right:50px;
+  top: 10px;
+}
 

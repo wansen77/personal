@@ -1,14 +1,30 @@
-.works-head{
-    background-image: url(../img/0429.jpg);
-    background-size: 100%;
-    position:center center;
-    width: 100%;
-    height: 400px;
-   
+.wrap{
+    max-width: 1920px;
+    // background-color: $gray-300;
 }
-.work-sele{
-    padding-top:320px ;
+
+.work-list a{
+ color:$light;
+ background-color: $secondary;
+ &:hover{
+ color:$secondary;
+ background-color: $primary;
+ }
 }
+.work-list a.active{
+    color:$secondary;
+}
+
+#full-video-works{
+ position: fixed;
+  min-width:100%;
+  min-height: 100%;
+  right: 0;
+  top: 0;
+  z-index: -1;
+//   opacity: .5;
+}
+
 
 @media (max-width: 768px){
     .works-head{

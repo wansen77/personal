@@ -3664,16 +3664,31 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-.works-head {
-  background-image: url(../img/0429.jpg);
-  background-size: 100%;
-  position: center center;
-  width: 100%;
-  height: 400px;
+.wrap {
+  max-width: 1920px;
 }
 
-.work-sele {
-  padding-top: 320px;
+.work-list a {
+  color: #f8f9fa;
+  background-color: #33506c;
+}
+
+.work-list a:hover {
+  color: #33506c;
+  background-color: #f2d13f;
+}
+
+.work-list a.active {
+  color: #33506c;
+}
+
+#full-video-works {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  right: 0;
+  top: 0;
+  z-index: -1;
 }
 
 @media (max-width: 768px) {
@@ -10236,11 +10251,13 @@ body {
 }
 
 .wrap-nor {
-  max-width: 1920px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .header {
   background: transparent;
+  position: relative;
 }
 
 #full-video {
@@ -10442,14 +10459,73 @@ h2 {
 
 .wrap-ani {
   background-image: url(../img/dog.gif);
-  max-width: 1920px;
+  max-width: 1600px;
+  margin: 0 auto;
   /* timeline */
 }
 
 .wrap-ani .header {
+  position: relative;
   background-image: url(../img/dog1-01.png);
   height: 250px;
   position: right bottom;
+}
+
+.wrap-ani .tran {
+  height: 497px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+}
+
+.wrap-ani .tran-1 {
+  background-color: black;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-box-shadow: 0 0 30px #3D252A;
+          box-shadow: 0 0 30px #3D252A;
+}
+
+.wrap-ani .tran-2 {
+  background-color: black;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  border-left: solid 1px white;
+  -webkit-box-shadow: 0 0 30px #3D252A;
+          box-shadow: 0 0 30px #3D252A;
+}
+
+.wrap-ani .tran-3 {
+  background-color: black;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  border-left: solid 1px white;
+  -webkit-box-shadow: 0 0 30px #3D252A;
+          box-shadow: 0 0 30px #3D252A;
+}
+
+.wrap-ani .tran-4 {
+  background-color: black;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  border-left: solid 1px white;
+  -webkit-box-shadow: 0 0 30px #3D252A;
+          box-shadow: 0 0 30px #3D252A;
 }
 
 .wrap-ani .data {
@@ -10457,11 +10533,11 @@ h2 {
 }
 
 .wrap-ani .data-1 {
-  border-radius: 50px 0 0 50px;
+  border-radius: 100px 0 0 100px;
 }
 
 .wrap-ani .data-4 {
-  border-radius: 0 50px 50px 0;
+  border-radius: 0 100px 100px 0;
 }
 
 .wrap-ani .img-border {
@@ -10582,17 +10658,65 @@ h2 {
   .wrap-ani .data-4 {
     border-radius: 0;
   }
+  .wrap-ani .tran {
+    height: auto;
+  }
+}
+
+@media (min-width: 767px) {
+  .tran-1.active {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+    background-image: url(../img/NS_01.png);
+    background-size: cover;
+    position: center top;
+  }
+  .tran-1.active .tran-data {
+    display: none;
+  }
+  .tran-2.active {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+    background-image: url(../img/NS_02.png);
+    background-size: cover;
+    position: center center;
+  }
+  .tran-2.active .tran-data {
+    display: none;
+  }
+  .tran-3.active {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+    background-image: url(../img/NS_03.png);
+    background-size: cover;
+    position: center center;
+  }
+  .tran-3.active .tran-data {
+    display: none;
+  }
+  .tran-4.active {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+    background-image: url(../img/NS_04.png);
+    background-size: cover;
+    position: center top;
+  }
+  .tran-4.active .tran-data {
+    display: none;
+  }
 }
 
 .wrap-pla {
   background-image: url(../img/sakura.png);
-  max-width: 1920px;
+  max-width: 1600px;
+  margin: 0 auto;
   /* timeline */
 }
 
 .wrap-pla .header {
   background-image: url(../img/sakura2.jpg);
   height: 250px;
+  position: relative;
 }
 
 .wrap-pla .photo {
@@ -10725,5 +10849,11 @@ h2 {
   .wrap-pla .photo-40 .h2-blue {
     color: white;
   }
+}
+
+#me_1 {
+  position: absolute;
+  right: 50px;
+  top: 10px;
 }
 /*# sourceMappingURL=all.css.map */

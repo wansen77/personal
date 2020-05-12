@@ -21,7 +21,21 @@ $(document).ready(function () {
 });
 
 
-
+// 翻牌
+$(document).ready(function () {
+    $(".tran-1").click(function () {
+        $(".tran-1").toggleClass('active')
+    })
+    $(".tran-2").click(function () {
+        $(".tran-2").toggleClass('active')
+    })
+    $(".tran-3").click(function () {
+        $(".tran-3").toggleClass('active')
+    })
+    $(".tran-4").click(function () {
+        $(".tran-4").toggleClass('active')
+    })
+});
 
 // // 圖表
 var ctx = document.getElementById('myChartPolarArea').getContext('2d');
@@ -103,3 +117,7 @@ var myChart = new Chart(ctx, {
 });
 
 
+// gsap 
+
+myTween = TweenMax.fromTo(".st0", 30, { drawSVG: "0%" }, { drawSVG: "0 100%" });
+// myTween.yoyo(true).repeat(-1);
